@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import math
+import json
 
 def get_distance(a,b, x,y):
     return math.sqrt((a-x)**2 + (b-y)**2)
@@ -77,7 +78,9 @@ def confidence(img, template):
     return np.where(res == conf), conf
 
 def main():
-    temp_match(["fbimg1.jpg"], "fbtemplate1.jpg",0.4, 30)
+    with open('config.json') as f:
+        data = json.load(f)
+        temp_match(data["imgs"], data["template"],0.4, 30)
 
 if __name__ == "__main__":
     main()
