@@ -58,14 +58,7 @@ def temp_match(files_array, template_name, confidence_threshold, distance_thresh
             cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
             text = f'Confidence: {round(float(conf), 2)}'
             cv2.putText(img, text, (x, y), 1, cv2.FONT_HERSHEY_PLAIN, (0, 0, 0), 2)
-            #print(confidence)
         cv2.imshow(name, img)
-
-        # print(y, x, conf)
-        # cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
-        # text = f'Confidence: {round(float(conf), 2)}'
-        # cv2.putText(img, text, (x, y), 1, cv2.FONT_HERSHEY_PLAIN, (0, 0, 0), 2)
-        # cv2.imshow(name, img)
         
     cv2.imshow('Template', template)
     cv2.waitKey(0)
