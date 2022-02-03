@@ -8,5 +8,5 @@ Needs a `config.json` file with the following structure
 ```
 
 #### Issues:
-confidence low
-multi template matching
+- confidence low
+- multi template matching
