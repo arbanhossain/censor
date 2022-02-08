@@ -10,3 +10,6 @@ Needs a `config.json` file with the following structure
 #### Issues:
 - confidence low
 - multi template matching
+
+### used:
+Python, OpenCV
